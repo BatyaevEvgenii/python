@@ -47,23 +47,23 @@
 #  если скажем эти файлы потом придется передавать.
 # Так же при выводе имя должно быть полностью в верхнем регистре!
 # Подумайте вспоминая урок, как это можно сделать максимально кратко, используя возможности языка Python.
-name = ['x', 'y', 'z', 'boss']
-price = [100000, 200000, 300000, 500000]
-array = dict(zip(name, price))
+# name = ['x', 'y', 'z', 'boss']
+# price = [100000, 200000, 300000, 500000]
+# array = dict(zip(name, price))
+# # for key, value in array.items():
+# #     if value < int(500000):
+# #         print(key, ' - ', value)
+# file = open('salary.txt', 'w')
 # for key, value in array.items():
 #     if value < int(500000):
-#         print(key, ' - ', value)
-file = open('salary.txt', 'w')
-for key, value in array.items():
-    if value < int(500000):
-        file.write('%s - %s\n' % (key, value))
-# print()
-file.close()
-with open('salary.txt', 'r') as file:
-    for line in file:
-        line_split = line.split(' - ')
-        # if int(line_split[1]) < int(500000):
-        print(line_split[0].upper(), ' - ', (int(line_split[1]) - int(float(line_split[1]) * float(0.13))))
+#         file.write('%s - %s\n' % (key, value))
+# # print()
+# file.close()
+# with open('salary.txt', 'r') as file:
+#     for line in file:
+#         line_split = line.split(' - ')
+#         # if int(line_split[1]) < int(500000):
+#         print(line_split[0].upper(), ' - ', (int(line_split[1]) - int(float(line_split[1]) * float(0.13))))
 
 #
 # Hard
