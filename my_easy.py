@@ -39,3 +39,4 @@ def goto_dir():
         print('Успешно перешел в папку {}'.format(os.getcwd()))
     else:
         print('Невозможно перейти')
+
