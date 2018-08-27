@@ -180,24 +180,22 @@ class Person:
         self.armor = armor
         return damage // armor
 
-    def attack(self, other, damage=50, armor=0.7):
-        self.damage = damage
-        self.armor = armor
+    def attack(self, other):
         damage = self.calculate_damage(self.damage, self.armor)
         other.health -= damage
         print(
-            '{} нанес {} урона {}, у {} осталось {} жизней.'.format(self.name, other.name, other.damage, other.name,
+            '{} нанес {} урона {}, у {} осталось {} жизней.'.format(self.name, other.name, self.damage, other.name,
                                                                     other.health))
 
 
 class Player(Person):
-    def __init__(self, name, health=100, damage=50, armor=0.7):
+    def __init__(self, name, health=200, damage=50, armor=0.7):
         super().__init__(health, damage, armor)
         self.name = name
 
 
 class Enemy(Person):
-    def __init__(self, name, health=100, damage=50, armor=0.7):
+    def __init__(self, name, health=100, damage=80, armor=0.7):
         super().__init__(health, damage, armor)
         self.name = name
 
@@ -216,9 +214,9 @@ def battle(player, enemy):
 
 
 player = Player('Игрок')
-print(player.name, player.health)
+print(player.name, player.health, player.damage, player.armor)
 enemy = Enemy('Враг')
-print(enemy.name, enemy.health)
+print(enemy.name, enemy.health, enemy.damage, enemy.armor)
 
 battle(player, enemy)
 
